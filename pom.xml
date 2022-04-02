@@ -10,6 +10,9 @@
     <version>1.0.0</version>
     <modules>
         <module>boot-datasource</module>
+        <module>boot-kafka</module>
+        <module>boot-rabbitmq</module>
+        <module>boot-redis</module>
     </modules>
 
     <parent>
@@ -22,5 +25,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+
 
 </project>
