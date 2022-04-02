@@ -1,0 +1,21 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.com.wudskq.mapper.DruidMapper">
+
+    <!-- 测试主数据源 -->
+    <select id="masterDateSource" resultType="java.lang.String">
+        select name from druid limit 1
+    </select>
+
+    <!-- 测试从数据源 -->
+    <select id="salve1DateSource" resultType="java.lang.String">
+        select name from druid limit 1
+    </select>
+
+    <!-- 测试从数据源 -->
+    <select id="slave2DateSource" resultType="java.lang.String">
+        select name from druid limit 1
+    </select>
+</mapper>
