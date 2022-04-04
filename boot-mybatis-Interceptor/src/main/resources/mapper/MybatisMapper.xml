@@ -10,10 +10,18 @@
         #{updateTime},#{updateBy})
     </insert>
 
+    <insert id="insert1" parameterType="Plan">
+        insert into plan (plan_name, plan_content, create_time, create_by, update_time, update_by)
+        values (#{data.planName},#{data.planContent},#{data.createTime},#{data.createBy},
+        #{data.updateTime},#{data.updateBy})
+    </insert>
+
     <update id="update" parameterType="Plan">
         update plan
         set plan_name = #{planName},plan_content = #{planContent},
         update_time = #{updateTime},update_by = #{updateBy}
         where id = #{id}
     </update>
+
+
 </mapper>

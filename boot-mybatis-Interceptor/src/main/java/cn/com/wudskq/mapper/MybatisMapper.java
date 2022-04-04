@@ -14,8 +14,11 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface MybatisMapper {
 
+    //单个对象
     void insert(Plan plan);
 
+    //多个参数
+    void insert1(@Param("data") Plan plan,@Param("remark") String remark);
 
     void update(Plan plan);
 }

@@ -27,6 +27,12 @@ public class MybatisController {
         mybatisSevice.insert(plan);
     }
 
+    @GetMapping("/insert1")
+    public void insert1(){
+        Plan plan = new Plan("计划一", "2022年");
+        mybatisSevice.insert1(plan);
+    }
+
     @GetMapping("/update")
     public void update(){
         Plan plan = new Plan("计划一", "2022年");

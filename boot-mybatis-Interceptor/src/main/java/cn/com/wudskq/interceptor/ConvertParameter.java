@@ -6,7 +6,7 @@ import java.util.Map;
  * @author chenfangchao
  * @title: ConvertParameter
  * @projectName boot-project
- * @description: TODO
+ * @description: TODO 判断mapper.xml层是否多个参数 @Param
  * @date 2022/4/5 12:25 AM
  */
 public class ConvertParameter {

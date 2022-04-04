@@ -25,6 +25,12 @@ public class MybatisSeviceImpl implements MybatisSevice {
     }
 
     @Override
+    public void insert1(Plan plan) {
+        mybatisMapper.insert1(plan,"参数二");
+    }
+
+
+    @Override
     public void update(Plan plan) {
         mybatisMapper.update(plan);
     }

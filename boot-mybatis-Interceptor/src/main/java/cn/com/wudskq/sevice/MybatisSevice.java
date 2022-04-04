@@ -13,6 +13,8 @@ public interface MybatisSevice {
 
     void insert(Plan plan);
 
+    void insert1(Plan plan);
 
     void update(Plan plan);
+
 }
