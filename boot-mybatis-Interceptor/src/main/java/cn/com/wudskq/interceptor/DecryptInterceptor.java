@@ -57,8 +57,10 @@ public class DecryptInterceptor implements Interceptor {
         return resultObject;
     }
 
+    //判断需要解密的Class
     private boolean needToDecrypt(Object object) {
         Class<?> objectClass = object.getClass();
+        //判断Class是否包含 SensitiveData注解
         SensitiveData sensitiveData = AnnotationUtils.findAnnotation(objectClass, SensitiveData.class);
         return Objects.nonNull(sensitiveData);
     }
