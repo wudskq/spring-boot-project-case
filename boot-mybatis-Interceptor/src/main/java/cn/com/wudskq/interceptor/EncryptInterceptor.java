@@ -14,6 +14,13 @@ import java.sql.PreparedStatement;
 import java.util.Objects;
 import java.util.Properties;
 
+/**
+ * @author chenfangchao
+ * @title: EncryptInterceptor
+ * @projectName boot-project
+ * @description: TODO 加密 param
+ * @date 2022/4/5 12:25 AM
+ */
 @Slf4j
 @Component
 @Intercepts({

@@ -15,6 +15,13 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Properties;
 
+/**
+ * @author chenfangchao
+ * @title: DecryptInterceptor
+ * @projectName boot-project
+ * @description: TODO 解密result
+ * @date 2022/4/5 12:25 AM
+ */
 @Slf4j
 @Component
 @Intercepts({
