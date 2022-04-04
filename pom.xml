@@ -13,6 +13,7 @@
         <module>boot-kafka</module>
         <module>boot-rabbitmq</module>
         <module>boot-redis</module>
+        <module>boot-mybatis-Interceptor</module>
     </modules>
 
     <parent>
