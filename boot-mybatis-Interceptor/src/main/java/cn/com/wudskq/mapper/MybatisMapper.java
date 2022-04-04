@@ -4,6 +4,8 @@ import cn.com.wudskq.model.Plan;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import javax.xml.ws.Response;
+
 /**
  * @author chenfangchao
  * @title: MybatisMapper
@@ -21,4 +23,6 @@ public interface MybatisMapper {
     void insert1(@Param("data") Plan plan,@Param("remark") String remark);
 
     void update(Plan plan);
+
+    Plan getInfo(@Param("id") Long id);
 }

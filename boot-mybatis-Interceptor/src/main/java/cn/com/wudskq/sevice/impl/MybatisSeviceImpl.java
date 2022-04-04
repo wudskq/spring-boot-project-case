@@ -6,6 +6,8 @@ import cn.com.wudskq.sevice.MybatisSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.ws.Response;
+
 /**
  * @author chenfangchao
  * @title: MybatisSeviceImpl
@@ -33,5 +35,10 @@ public class MybatisSeviceImpl implements MybatisSevice {
     @Override
     public void update(Plan plan) {
         mybatisMapper.update(plan);
+    }
+
+    @Override
+    public Plan getInfo(Long id) {
+        return  mybatisMapper.getInfo(id);
     }
 }

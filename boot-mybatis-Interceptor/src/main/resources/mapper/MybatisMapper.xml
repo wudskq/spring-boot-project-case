@@ -23,5 +23,7 @@
         where id = #{id}
     </update>
 
-
+    <select id="getInfo" resultType="cn.com.wudskq.model.Plan">
+        select * from plan where id = #{id}
+    </select>
 </mapper>

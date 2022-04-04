@@ -2,6 +2,8 @@ package cn.com.wudskq.sevice;
 
 import cn.com.wudskq.model.Plan;
 
+import javax.xml.ws.Response;
+
 /**
  * @author chenfangchao
  * @title: MybatisSevice
@@ -17,4 +19,5 @@ public interface MybatisSevice {
 
     void update(Plan plan);
 
+    Plan getInfo(Long id);
 }

@@ -5,6 +5,7 @@ import cn.com.wudskq.sevice.MybatisSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -39,4 +40,11 @@ public class MybatisController {
         plan.setId(1L);
         mybatisSevice.update(plan);
     }
+
+    @GetMapping("/info")
+    public Plan getInfo(@RequestParam("id")Long id){
+       return mybatisSevice.getInfo(id);
+    }
 }
+
+
