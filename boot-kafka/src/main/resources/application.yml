@@ -46,6 +46,7 @@ spring:
 wudskq:
   kafka:
     topic:
-      test1: 'test-topic1'
-      test2: 'test-topic2'
+      test0: 'test-topic0' #用作默认生产与消费
+      test1: 'test-topic1' #用于测试集成的第一个生产者与消费者
+      test2: 'test-topic2' #用于测试集成的第二个生产者与消费者
       group:  '2022040711'
