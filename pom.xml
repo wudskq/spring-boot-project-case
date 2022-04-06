@@ -14,6 +14,7 @@
         <module>boot-rabbitmq</module>
         <module>boot-redis</module>
         <module>boot-mybatis-Interceptor</module>
+        <module>boot-mybatis-plus-interceptor</module>
     </modules>
 
     <parent>
