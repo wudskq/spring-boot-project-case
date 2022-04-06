@@ -2,7 +2,7 @@
 server:
   port: 8081
 
-#多数据源配置
+#数据源配置
 spring:
   datasource:
    druid:
