@@ -15,6 +15,7 @@
         <module>boot-redis</module>
         <module>boot-mybatis-Interceptor</module>
         <module>boot-mybatis-plus-interceptor</module>
+        <module>boot-mqtt</module>
     </modules>
 
     <parent>

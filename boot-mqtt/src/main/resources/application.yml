@@ -1,0 +1,13 @@
+server:
+  port: 8085
+
+mqtt:
+  host: tcp://47.111.231.31:1883
+  userName: mqtt
+  passWord: mqtt
+  keepLiveTime: 100
+  enabled: true
+  cilentId: ${random.uuid}
+  topic:
+   topic0: artemis/topic0/3187675137/admin
+   topic1: artemis/topic1/3204452353/admin
