@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+spring:
+  rabbitmq:
+    host: 47.111.231.31
+    port: 5672
+    username: rabbitmq
+    password: root
+
+infovision-rabbit:
+  groupId: 202201011
