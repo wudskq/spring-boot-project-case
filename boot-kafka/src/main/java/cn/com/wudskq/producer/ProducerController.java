@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-import javax.annotation.Resources;
 
 
 /**
@@ -49,6 +47,9 @@ public class ProducerController {
 
     @Value("${wudskq.kafka.topic.test2}")
     private String topic2;
+
+    @Value("${wudskq.kafka.topic.consumer.test3}")
+    private String topic3;
 
 
 //    //默认生产者
@@ -101,6 +102,24 @@ public class ProducerController {
             public void onSuccess(SendResult<String, Object> stringObjectSendResult) {
                 //成功的处理
                 log.info(topic2 + " - 生产者 发送消息成功：" + stringObjectSendResult.toString());
+            }
+        });
+    }
+
+    //分区发送消息
+    @GetMapping("/partitions")
+    public void producePartitions0(){
+        ListenableFuture<SendResult<String, Object>> future = kafkaOneTemplate.send(topic3, "partitions");
+        future.addCallback(new ListenableFutureCallback<SendResult<String, Object>>() {
+            @Override
+            public void onFailure(Throwable throwable) {
+                //发送失败的处理
+                log.info(topic3 + " - 生产者 发送消息失败：" + throwable.getMessage());
+            }
+            @Override
+            public void onSuccess(SendResult<String, Object> stringObjectSendResult) {
+                //成功的处理
+                log.info(topic3 + " - 生产者 发送消息成功：" + stringObjectSendResult.toString());
             }
         });
     }

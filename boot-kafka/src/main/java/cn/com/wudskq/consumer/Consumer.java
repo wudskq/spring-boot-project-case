@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.annotation.TopicPartition;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -32,6 +33,9 @@ public class Consumer {
     @Value("${wudskq.kafka.topic.test2}")
     private String topic2;
 
+    @Value("${wudskq.kafka.topic.consumer.test3}")
+    private String topic3;
+
 
     //默认消费
     @KafkaListener(topics = "${wudskq.kafka.topic.test0}", groupId = "${wudskq.kafka.topic.group}")
@@ -56,7 +60,33 @@ public class Consumer {
         record.forEach(consumerRecord -> {
             logger.info("第二个消费者收到 "+topic2+ "的消息 "+consumerRecord.value());
         });
-
     }
 
+    //kafka分区消费
+    @KafkaListener(
+            groupId = "${wudskq.kafka.topic.group}",
+            topicPartitions = {
+                    @TopicPartition(
+                            topic = "${wudskq.kafka.topic.consumer.test3}",
+                            partitions = {"#{'${wudskq.kafka.topic.consumer.partitions0}'.split(',')}"}
+                    )
+            }
+    )
+    public void listenerPartitions0(ConsumerRecord<?, ?> record) {
+        logger.info("第一个消费者收到 "+topic3+"分区"+"partitions0的消息 "+record.value());
+    }
+
+    //kafka分区消费
+    @KafkaListener(
+            groupId = "${wudskq.kafka.topic.group}",
+            topicPartitions = {
+                    @TopicPartition(
+                            topic = "${wudskq.kafka.topic.consumer.test3}",
+                            partitions = {"#{'${wudskq.kafka.topic.consumer.partitions1}'.split(',')}"}
+                    )
+            }
+    )
+    public void listenerPartitions1(ConsumerRecord<?, ?> record) {
+        logger.info("第一个消费者收到 "+topic3+"分区"+"partitions1的消息 "+record.value());
+    }
 }
