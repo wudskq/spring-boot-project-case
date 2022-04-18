@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+#数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev-local?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  #日期配置 yyyy-MM-dd HH:mm:ss
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+#映射xml
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.com.wudskq.model.dto
+  configuration:
+    #开启驼峰
+    map-underscore-to-camel-case: true
+
+# JWT配置
+jwt:
+  # 密匙Key
+  secret: limoumou
+  # HeaderKey
+  tokenHeader: Authorization
+  # Token前缀
+  tokenPrefix: Bearer
+  # 过期时间，单位秒
+  expiration: 86400
+  # 配置白名单（不需要认证）
+  antMatchers: /swagger-resources/**,/swagger-ui.html,/v2/api-docs,/webjars/**,/doc.html
+

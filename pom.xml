@@ -16,6 +16,7 @@
         <module>boot-mybatis-Interceptor</module>
         <module>boot-mybatis-plus-interceptor</module>
         <module>boot-mqtt</module>
+        <module>boot-security</module>
     </modules>
 
     <parent>
