@@ -95,6 +95,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
  
     @Value("${jwt.antMatchers}")
     private String antMatchers;//白名单,这里是不做验证的方法
+
     /**
      * 安全权限配置
      */
