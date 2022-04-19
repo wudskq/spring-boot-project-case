@@ -104,6 +104,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests() // 权限配置
                 // 获取白名单（不进行权限验证）
                 .antMatchers(antMatchers.split(",")).permitAll()
+                //匿名访问url
+                .antMatchers("/page/**").permitAll()
                 // 其他的需要登陆后才能访问
                 .anyRequest().authenticated()
                 // 配置未登录处理类
