@@ -23,7 +23,7 @@ mybatis-plus:
 # JWT配置
 jwt:
   # 密匙Key
-  secret: limoumou
+  secret: Awhq^%!*@AJ1263(*@
   # HeaderKey
   tokenHeader: Authorization
   # Token前缀
