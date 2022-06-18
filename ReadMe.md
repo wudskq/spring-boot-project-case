@@ -1,6 +1,6 @@
 ## SpringBoot整合示例项目
 
-![Spring-Boot](https://img.shields.io/badge/Spring--Boot-2.2.13.RELEASE-brightgreen)![kafka](https://img.shields.io/badge/Kafka-卡夫卡-orange) ![datasoirce](https://img.shields.io/badge/DataSource-多数据源-blue) ![mqtt](https://img.shields.io/badge/Mqtt-物联网-lightgrey) ![Mybatis](https://img.shields.io/badge/-Myabtis-success) ![](https://img.shields.io/badge/-Myabtis--Plus-success) ![](https://img.shields.io/badge/-RabbitMQ-orange) ![](https://img.shields.io/badge/-Redis-green) ![](https://img.shields.io/badge/-Spring--Security-blue)
+![Spring-Boot](https://img.shields.io/badge/Spring--Boot-2.2.13.RELEASE-brightgreen) ![kafka](https://img.shields.io/badge/Kafka-卡夫卡-orange) ![datasoirce](https://img.shields.io/badge/DataSource-多数据源-blue) ![mqtt](https://img.shields.io/badge/Mqtt-物联网-lightgrey) ![Mybatis](https://img.shields.io/badge/-Myabtis-success) ![](https://img.shields.io/badge/-Myabtis--Plus-success) ![](https://img.shields.io/badge/-RabbitMQ-orange) ![](https://img.shields.io/badge/-Redis-green) ![](https://img.shields.io/badge/-Spring--Security-blue)
 
 **Spring Boot 中依赖集成的示例项目, 每个模块都为单独工程, 可单独作为最小依赖进行运行**
 
